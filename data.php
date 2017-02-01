@@ -205,7 +205,7 @@ $userRow=mysqli_fetch_array($res);
 				?>
 					<tr>
 						<td><?php echo $data['name']; ?></td>
-						<td><?php echo $data['description']; ?></td>
+						<td><?php echo nl2br(stripcslashes($data['description'])); ?></td>
 						<td><?php echo $data['leaderboard']; ?></td>
 					</tr>
               </table>
