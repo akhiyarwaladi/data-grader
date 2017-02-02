@@ -41,39 +41,43 @@ $userRow=mysqli_fetch_array($res);
       <div class="row">
         <div class="col-lg-12 col-xs-12">
           <h2><?php echo $data['name'] ?></h2>
-          <img src="images/<?php echo $data['image'];?>" width="640px" height="480px"><br><br>
+          <img class="img-responsive"src="images/<?php echo $data['image'];?>" width="640px" height="480px"><br><br>
         </div>
-		<div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
+        <div class="container">
 
-              <h3><?php echo mysqli_num_rows($qlead)?></h3>
+    <div class="row">
+        <div class="col-xs-12 col-lg-3">
+              <div class="small-box bg-yellow">
+                <div class="inner">
+                  <h3><?php echo mysqli_num_rows($qlead)?></h3>
+                  <p>Leader Table</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-person-add"></i>
+                </div>
 
-              <p>Leader Table</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-
-            <a href="leaderboard.php?id=<?php echo $data['dataId']; ?>" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </div>
+                <a href="leaderboard.php?id=<?php echo $data['dataId']; ?>" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>
+                </a>
+              </div>
 
         </div>
-		<div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
+        <div class="col-md-3 col-sm-6 col-lg-3 col-xs-12">
+              <div class="info-box">
+                <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-text">Download Data</span>
-              <span class="info-box-number"><?php echo $data['link']; ?></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Download Data</span>
+                  <span class="info-box-number"><?php echo $data['link']; ?></span>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
             </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
+    </div>
+
+</div>
+
         <div class="col-md-12">
           <div class="box">
             <div class="box-header with-border">
